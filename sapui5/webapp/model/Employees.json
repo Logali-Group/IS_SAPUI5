@@ -1,0 +1,25 @@
+{
+    "Employees":[
+        {
+            "EmployeeId":"1",
+            "SapId":"jorge@logaligroup.com",
+            "Dni":"123456789",
+            "FirstName":"Jorge",
+            "LastName":"Briceno"
+        },
+        {
+            "EmployeeId":"2",
+            "SapId":"jesus@logaligroup.com",
+            "Dni":"123456789",
+            "FirstName":"Jesus",
+            "LastName":"Gonzalez"
+        },
+        {
+            "EmployeeId":"3",
+            "SapId":"monica@logaligroup.com",
+            "Dni":"123456789",
+            "FirstName":"Monica",
+            "LastName":"Montiel"
+        }
+    ]
+}

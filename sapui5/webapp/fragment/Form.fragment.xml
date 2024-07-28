@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+                xmlns="sap.m"
+                xmlns:form="sap.ui.layout.form"
+                xmlns:core="sap.ui.core">
+
+    <Dialog id="FormDialog">
+        <content>
+            <form:SimpleForm id="SimpleForm">
+                <form:content>
+                    <Label id="LabelEmployeeId" text="Employee ID"/>
+                    <Input id="InputEmployeeId" value="{view>/EmployeeId}"/>
+
+                    <Label id="LabelEmail" text="Email"/>
+                    <Input id="InputEmail" value="{view>/SapId}"/>
+
+                    <Label id="LabelDni" text="Number Document"/>
+                    <Input id="InputDni" value="{view>/Dni}"/>
+
+                    <Label id="labelFirstname" text="First Name"/>
+                    <Input id="LabelFirstName" value="{view>/FirstName}"/>
+
+                    <Label id="labelLastName" text="Last Name"/>
+                    <Input id="InputLastName" value="{view>/LastName}"/>
+
+                </form:content>
+            </form:SimpleForm>
+        </content>
+
+        <endButton>
+            <Button
+                    id="Cancel"
+                    text="Cancel"
+                    press="onCloseDialog"
+                    type="Reject"
+                    width="6rem"/>
+        </endButton>
+
+        <beginButton>
+            <Button id="save"
+                    text="Save"
+                    press="onSave"
+                    type="Accept"
+                    width="6rem"/>
+        </beginButton>
+    </Dialog>
+
+</core:FragmentDefinition>

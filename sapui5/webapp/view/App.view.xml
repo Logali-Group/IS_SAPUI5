@@ -1,0 +1,83 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.f" xmlns:filter="sap.ui.comp.filterbar" xmlns="sap.m" controllerName="sapui5.controller.App">
+
+    <Shell>
+        <App>
+
+            <f:DynamicPage id="DynamicPage">
+
+                <f:title>
+                    <f:DynamicPageTitle id="DynamiCpagetitle">
+                        <f:heading>
+                                <Title id="Title" text="Users"/>
+                        </f:heading>
+                        <f:navigationActions>
+                            <Button id="OpenForm" text="Open Form" press="onOpenDialog" type="Emphasized" width="8rem"/>
+                        </f:navigationActions>
+                    </f:DynamicPageTitle>
+                </f:title>
+
+                <f:header>
+                    <f:DynamicPageHeader id="DyanmicPageHeader">
+                        <filter:FilterBar id="Filterbar">
+                            <filter:filterGroupItems>
+                                <filter:FilterGroupItem id="FilterA" groupName="filters" name="FullNane" label="Full Name" visibleInFilterBar="true">
+                                    <filter:control>
+                                        <Input id="InputFilter" value="{filters>/FullName}" liveChange="onFilter"/>
+                                    </filter:control>
+                                </filter:FilterGroupItem>
+                            </filter:filterGroupItems>
+                        </filter:FilterBar>
+                    </f:DynamicPageHeader>
+                </f:header>
+
+
+                <f:content>
+    <Table id="table0" items="{employees>/Employees}">
+        <items>
+            <ColumnListItem type="Active" id="item0">
+                <cells>
+                    <Text text="{employees>EmployeeId}" id="text6"/>
+                    <Text text="{employees>SapId}" id="text7"/>
+                    <Text text="{employees>Dni}" id="text8"/>
+                    <Text text="{employees>FirstName}" id="text9"/>
+                    <Text text="{employees>LastName}" id="text10"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+
+        <columns>
+                <Column id="column0">
+                        <Label text="Employee ID" id="label0"/>
+                </Column>
+
+                <Column id="column1">
+                        <Label text="Email" id="label1"/>
+                </Column>
+
+                <Column id="column2">
+                        <Label text="Number Document" id="label2"/>
+                </Column>
+
+                <Column id="column3">
+                        <Label text="First Name" id="label3"/>
+                </Column>
+
+                <Column id="column4">
+                        <Label text="Last Name" id="label4"/>
+                </Column>
+        </columns>
+            
+    </Table>
+                
+                </f:content>
+
+            </f:DynamicPage>
+
+            
+
+        </App>
+    </Shell>
+
+
+
+</mvc:View>
